@@ -25,7 +25,7 @@
 ```lua 
 	['hairspray'] = {
 		label = 'Hairspray',
-  description = 'A can of hairspray to restyle your hair',
+  		description = 'A can of hairspray to restyle your hair',
 		weight = 1,
 		stack = false,
 		close = true,
