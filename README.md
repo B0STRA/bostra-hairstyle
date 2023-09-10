@@ -1,6 +1,6 @@
 # Bostra-Hairstyle
 
-![bostra-hairstyle](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/b0151fef-5d6f-4e72-ab94-68938c026e79)
+![bostra-hairstyle](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/bd419e7b-59c9-4ab1-9ceb-627c3885946b)
 
 
 **Features:**
