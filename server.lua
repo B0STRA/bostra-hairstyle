@@ -7,9 +7,8 @@ QBCore.Functions.CreateUseableItem(Config.ItemName, function(source, item)
 	TriggerClientEvent('bostra-hairstyle:client:openMenu', source)
 end)
 elseif Config.Items then
+	ESX = exports["es_extended"]:getSharedObject()
 	ESX.RegisterUsableItem(Config.ItemName, function(source)
-		local Player = ESX.GetPlayerFromId(source)
-		if not Player.getInventoryItem(Config.ItemName) then return end
-		TriggerClientEvent('bostra-hairstyle:client:openMenu', source)
+		TriggerClientEvent("bostra-hairstyle:client:openMenu", source)
 	end)
 end
