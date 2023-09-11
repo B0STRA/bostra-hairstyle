@@ -11,7 +11,8 @@
 * Simple resource with 0.0ms resmon idle, up to 0.02 when starting ptfx. 
 * Standalone Framework-wise as there's no framework dependencies if not using item or QB notify. QB/ESX item setup, I don't use esx so test or pr at your will. 
 * Command or Item use.
-* Custom prop. 
+* [Custom prop](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/5e243dfe-9056-4640-8318-e9db90226604)
+
 
 
 # [Preview-Video](https://streamable.com/jxw9fn)
