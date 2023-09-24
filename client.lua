@@ -11,7 +11,7 @@ function SendNotify(message, type)
 	if Config.Notify == "QB" or Config.Notify == "qb" then
 		QBCore.Functions.Notify(message, type)
 	elseif Config.Notify == "OX" or Config.Notify == "ox" then
-		lib.Notify({ title = "Hair Styling", description = message, type = type })
+		lib.notify({ title = "Hair Styling", description = message, type = type })
 	end
 end
 
