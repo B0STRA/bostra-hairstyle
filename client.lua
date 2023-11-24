@@ -5,7 +5,7 @@ end
 OriginalHairStyle = {}
 
 function SendNotify(message, type)
-	if Config.Notify == false or Config.Notify == nil then
+	if not Config.Notify or Config.Notify == nil then
 		return
 	end
 	if Config.Notify == "QB" or Config.Notify == "qb" then
@@ -25,28 +25,27 @@ function SetPlayerHair(player, newStyle)
 end
 
 function StartScene()
-    local propModel = Config.PropName
-    lib.requestModel(propModel)
-    lib.requestAnimDict("switch@franklin@lamar_tagging_wall")
-    lib.requestAnimDict("random@kidnap_girl") 
-    lib.requestNamedPtfxAsset("core")
-    local particleColor = { R = 255, G = 255, B = 255 }
-    UseParticleFxAssetNextCall("core")
-    local propObject = CreateObject(propModel, 0, 0, 0, true, true, true)
-    AttachEntityToEntity(propObject, PlayerPedId(), 71, 0.108244000122, -0.025791563607893, -0.036832240932658,
-        -56.874661452405,
-        62.478464465016, -4.3258342327393, true, true, false, true, 1, true)
-    TaskPlayAnim(PlayerPedId(), "switch@franklin@lamar_tagging_wall", "lamar_tagging_wall_loop_lamar", 8.0, 8.0, -1, 1, 0, false, false, false)
-    Wait(5000)
-    TaskPlayAnim(PlayerPedId(), "random@kidnap_girl", "ig_1_girl_on_phone_loop", 8.0, 8.0, -1, 1, 0, true, false, false)
-    local particleFx = StartParticleFxLoopedOnEntity("ent_amb_steam", propObject, 0.0, 0.0, 0.145, 40.0, 91.0277, 0.0, 1.0,
-        false, false, false)
-    SetParticleFxNonLoopedColour(particleFx, particleColor.R, particleColor.G, particleColor.B, false)
-    SetParticleFxNonLoopedAlpha(particleFx, 1.0)
-    Wait(5000)
-    DeleteObject(propObject)
-    StopParticleFxLooped(particleFx, 0)
-    ClearPedTasks(PlayerPedId())
+	local propModel = Config.PropName
+	lib.requestModel(propModel)
+	SetModelAsNoLongerNeeded(propModel)
+	lib.requestAnimDict("switch@franklin@lamar_tagging_wall")
+	lib.requestAnimDict("ebrwny_spray")
+	lib.requestNamedPtfxAsset("core")
+	local particleColor = { R = 255, G = 255, B = 255 }
+	UseParticleFxAssetNextCall("core")
+	local propObject = CreateObject(propModel, 0, 0, 0, true, true, true)
+	AttachEntityToEntity(propObject,PlayerPedId(),72,0.038462107527153,-0.059969861706126,-0.025835640614247,-21.457779490453,80.67627373586,47.262632425591,true,true,false,true,1,true)
+	TaskPlayAnim(PlayerPedId(),"switch@franklin@lamar_tagging_wall","lamar_tagging_wall_loop_lamar",8.0,8.0,-1,16,0,false,false,false)
+	Wait(5000)
+	TaskPlayAnim(PlayerPedId(), "ebrwny_spray", "ebrwny_hair", 8.0, 8.0, -1, 16, 0, true, false, false)
+	local particleFx = StartParticleFxLoopedOnEntity("ent_amb_steam", propObject, 0.0, 0.0, 0.145, 40.0, 91.0277, 0.0,
+		1.0, false, false, false)
+	SetParticleFxNonLoopedColour(particleFx, particleColor.R, particleColor.G, particleColor.B, false)
+	SetParticleFxNonLoopedAlpha(particleFx, 1.0)
+	Wait(4000)
+	DeleteObject(propObject)
+	StopParticleFxLooped(particleFx, 0)
+	ClearPedTasks(PlayerPedId())
 end
 
 function HatHair(arguments)
@@ -57,7 +56,7 @@ function HatHair(arguments)
 	if #arguments == 0 then
 		if OriginalHairStyle[player] then
 			SetPlayerHair(player, OriginalHairStyle[player])
-			SendNotify("Hair set to original style.", "success")
+			SendNotify("Hair set to the original style.", "success")
 		else
 			SendNotify("You have not styled your hair yet.", "error")
 		end
@@ -79,7 +78,8 @@ exports("HatHair", HatHair)
 function CreateHairMenu(_, isMale)
 	local hairStylesConfig = isMale and Config.Male or Config.Female
 	local menuOptions = {}
-	table.insert(menuOptions, {
+
+	local restyleOption = {
 		title = "Restyle Hair",
 		description = "Reset your hair to the original style.",
 		icon = "fas fa-cut",
@@ -87,9 +87,19 @@ function CreateHairMenu(_, isMale)
 			StartScene()
 			HatHair({})
 		end,
-	})
+	}
+	table.insert(menuOptions, restyleOption)
+
+	local sortedStyles = {}
 	for _, style in pairs(hairStylesConfig) do
-		table.insert(menuOptions, {
+		table.insert(sortedStyles, style)
+	end
+	table.sort(sortedStyles, function(a, b)
+		return a.Position < b.Position
+	end)
+
+	for _, style in ipairs(sortedStyles) do
+		local hairOption = {
 			title = style.Title,
 			description = style.Description,
 			icon = "fas fa-cut",
@@ -98,8 +108,10 @@ function CreateHairMenu(_, isMale)
 				HatHair({ tostring(style.Position) })
 				ClearPedTasks(PlayerPedId())
 			end,
-		})
+		}
+		table.insert(menuOptions, hairOption)
 	end
+
 	lib.registerContext({
 		id = isMale and "male_hair_menu" or "female_hair_menu",
 		title = "Hairspray Styling",

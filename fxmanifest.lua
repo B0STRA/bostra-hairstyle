@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 description 'Basic script for adjusting hair for hats or styling hair on the go.'
 author 'Bostra'
-version '1.0.0'
+version '1.1.0'
 repository 'https://github.com/b0stra/bostra-hairstyle'
 lua54 'yes'
 
