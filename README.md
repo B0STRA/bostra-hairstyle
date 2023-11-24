@@ -1,6 +1,8 @@
 # Bostra-Hairstyle
 
-![bostra-hairstyle](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/bd419e7b-59c9-4ab1-9ceb-627c3885946b)
+
+![bostra-hairstyle](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/f6855121-cd0b-45b0-b3ce-4ff69c68fdb2)
+# [Preview-Video](https://streamable.com/jxw9fn)
 
 
 **Features:**
@@ -11,11 +13,8 @@
 * Simple resource with 0.0ms resmon idle, up to 0.02 when starting ptfx. 
 * Standalone **Framework-wise** as there's no framework dependencies if not using item or QB notify. QB/ESX item setup, I don't use esx so test or pr at your will. 
 * Command or Item use.
-* [Custom prop](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/5e243dfe-9056-4640-8318-e9db90226604)
-
-
-
-# [Preview-Video](https://streamable.com/jxw9fn)
+* [Custom prop: B0STRA](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/5e243dfe-9056-4640-8318-e9db90226604)
+* [Custom animation: Enchanted Animations](https://discord.gg/EugSpPYh)
 
 
 
