@@ -56,7 +56,8 @@
 
 # Dependencies
 None if not using menus or framework reliant item use. 
-[ox_lib](https://github.com/overextended/ox_lib)
+
+[ox_lib](https://github.com/overextended/ox_lib) - if using menus
 
 
  <h1>Support</h1>
