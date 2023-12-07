@@ -59,16 +59,5 @@ None if not using menus or framework reliant item use.
 
 [ox_lib](https://github.com/overextended/ox_lib) - if using menus
 
-
- <h1>Support</h1>
-<u1>
-
-[Bostra-Development Discord](https://dsc.gg/bostra)
-
-</u1>
-
-<u1>
-
-[md-scripts Discord](https://discord.gg/RVx8nVwcEG)
-
-</u1>
+## Troubleshooting & Support
+[Mustache Scripts - Discord](https://discord.gg/RVx8nVwcEG)
