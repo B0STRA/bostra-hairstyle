@@ -53,6 +53,8 @@
 # How to Use
 * Use ```/hathair (position)``` for example ```/hathair 1``` will be the Hair1 in the config.
 
+# Credits
+[Enchanted Animations - Custom Animations](https://discord.gg/y8TS2JgtYr)
 
 # Dependencies
 None if not using menus or framework reliant item use. 
