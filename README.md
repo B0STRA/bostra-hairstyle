@@ -61,5 +61,8 @@ None if not using menus or framework reliant item use.
 
 [ox_lib](https://github.com/overextended/ox_lib) - if using menus
 
-## Troubleshooting & Support
+# Troubleshooting & Support
 [Mustache Scripts - Discord](https://discord.gg/RVx8nVwcEG)
+
+## Tip / Commission Me
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A46AZW4)
