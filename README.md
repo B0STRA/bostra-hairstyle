@@ -32,7 +32,8 @@
 		consume = 0,
 		client = {
 			event = 'bostra-hairstyle:client:openMenu'
-	},}
+	}
+},
 ```
 * qb/lj/ps-inventory goes into qb-core/shared/items.lua
 ```lua
