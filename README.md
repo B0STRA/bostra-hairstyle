@@ -14,7 +14,7 @@
 * Standalone **Framework-wise** as there's no framework dependencies if not using item or QB notify. QB/ESX item setup, I don't use esx so test or pr at your will. 
 * Command or Item use.
 * [Custom prop: B0STRA](https://github.com/B0STRA/bostra-hairstyle/assets/119994243/5e243dfe-9056-4640-8318-e9db90226604)
-* [Custom animation: Enchanted Animations](https://discord.gg/EugSpPYh)
+* [Custom animation: Enchanted Animations](https://discord.gg/EugSpPYh) @EnchantedBrownie
 
 
 
@@ -55,7 +55,7 @@
 * Use ```/hathair (position)``` for example ```/hathair 1``` will be the Hair1 in the config.
 
 # Credits
-[Enchanted Animations - Custom Animations](https://discord.gg/y8TS2JgtYr)
+[Enchanted Animations - Custom Animations](https://discord.gg/y8TS2JgtYr) @EnchantedBrownie
 
 # Dependencies
 None if not using menus or framework reliant item use. 
